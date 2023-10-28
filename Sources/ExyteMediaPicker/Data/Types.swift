@@ -6,6 +6,7 @@ import Foundation
 
 public typealias MediaPickerCompletionClosure = ([Media]) -> Void
 public typealias MediaPickerCancelClosure = () -> Void
+public typealias MediaPickerDoneClosure = () -> Void
 public typealias MediaPickerOrientationHandler = (ShouldLock) -> Void
 public typealias SimpleClosure = ()->()
 

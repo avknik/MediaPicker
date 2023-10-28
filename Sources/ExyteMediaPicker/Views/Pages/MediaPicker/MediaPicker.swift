@@ -37,6 +37,7 @@ public struct MediaPicker<AlbumSelectionContent: View, CameraSelectionContent: V
     @Binding private var isPresented: Bool
     private let onChange: MediaPickerCompletionClosure
     private let onCancel: MediaPickerCancelClosure
+    private let onDone: MediaPickerDoneClosure
 
     // MARK: - View builders
 
@@ -77,6 +78,7 @@ public struct MediaPicker<AlbumSelectionContent: View, CameraSelectionContent: V
     public init(isPresented: Binding<Bool>,
                 onChange: @escaping MediaPickerCompletionClosure,
                 onCancel: @escaping MediaPickerCancelClosure,
+                onDone: @escaping MediaPickerDoneClosure,
                 albumSelectionBuilder: AlbumSelectionClosure? = nil,
                 cameraSelectionBuilder: CameraSelectionClosure? = nil,
                 cameraViewBuilder: CameraViewClosure? = nil) {
@@ -87,6 +89,7 @@ public struct MediaPicker<AlbumSelectionContent: View, CameraSelectionContent: V
 
         self.onChange = onChange
         self.onCancel = onCancel
+        self.onDone = onDone
         self.albumSelectionBuilder = albumSelectionBuilder
         self.cameraSelectionBuilder = cameraSelectionBuilder
         self.cameraViewBuilder = cameraViewBuilder

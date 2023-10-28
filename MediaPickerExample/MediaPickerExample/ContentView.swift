@@ -58,7 +58,8 @@ struct ContentView: View {
             MediaPicker(
                 isPresented: $showDefaultMediaPicker,
                 onChange: { medias = $0 },
-                onCancel: {}
+                onCancel: {},
+                onDone: {}
             )
             .showLiveCameraCell()
             .mediaSelectionLimit(1)

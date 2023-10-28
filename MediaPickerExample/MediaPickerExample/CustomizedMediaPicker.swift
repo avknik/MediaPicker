@@ -28,6 +28,7 @@ struct CustomizedMediaPicker: View {
             isPresented: $isPresented,
             onChange: { medias = $0 },
             onCancel: {},
+            onDone: {},
             albumSelectionBuilder: { _, albumSelectionView, _ in
                 VStack {
                     headerView
