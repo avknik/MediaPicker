@@ -272,6 +272,7 @@ public struct MediaPicker<AlbumSelectionContent: View, CameraSelectionContent: V
                     onChange([current])
                 }
                 isPresented = false
+                onDone()
             }
         }
         .padding(12)
