@@ -17,7 +17,8 @@ struct FilterMediaPicker: View {
     var body: some View {
         MediaPicker(
             isPresented: $isPresented,
-            onChange: { medias = $0 }
+            onChange: { medias = $0 },
+            onCancel: {}
         )
         .applyFilter { await isMostlyBlueAndGreen($0) }
     }

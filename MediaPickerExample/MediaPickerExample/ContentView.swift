@@ -57,7 +57,8 @@ struct ContentView: View {
         .sheet(isPresented: $showDefaultMediaPicker) {
             MediaPicker(
                 isPresented: $showDefaultMediaPicker,
-                onChange: { medias = $0 }
+                onChange: { medias = $0 },
+                onCancel: {}
             )
             .showLiveCameraCell()
             .mediaSelectionLimit(1)
